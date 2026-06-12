@@ -50,6 +50,7 @@ export default function ActivitiesPage(){
             <h1>Activities</h1>
             {loading && <p>Loading...</p>}
             {error && <p>Error fetching activities</p>}
+            {activities.length === 0 && !loading && !error && <p>No activities found</p>}
             {!loading && !error && (
                 <ul>
                     {activities.map(activity => (
